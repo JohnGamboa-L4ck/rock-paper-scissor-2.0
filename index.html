@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock Paper Scissors</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1 id = "title">Rock Paper Scissor</h1>
+        <p id = "how_to_win">First player to reach a score of 5 wins the game.</p>
+        <!-- rock crushes scissors, scissors cuts paper, paper covers rock -->
+        <div class = "container">
+            <div id = "computerDb" class = "dashboard">
+                <label id = "labelComputerScore">Score: 0</label>
+                <label>Computer <span class="material-icons customized-icon">smart_toy</span></label>
+                <div class = "armory">
+                    <i class="far fa-hand-scissors" id = "cPlayRock"></i>                
+                    <i class="far fa-hand-paper" id = "cPlayPaper"></i>
+                    <i class="far fa-hand-rock" id = "cPlayScissor"></i>
+                </div>
+            </div>
+            <div class = "arena">
+                <!-- <i class="far fa-hand-scissors"></i>
+                <p>VS.</p>
+                <i class="far fa-hand-scissors"></i>  -->
+            </div>
+            <div id = "playerDb" class = "dashboard">
+                <div class = "armory">
+                    <i class="far fa-hand-rock playerWeapons" id = "playRock"></i>
+                    <i class="far fa-hand-paper playerWeapons" id = "playPaper"></i>
+                    <i class="far fa-hand-scissors playerWeapons" id = "playScissor"></i>
+                </div>
+                <div class="hide">Rock | Paper | Scissor</div>
+                <label><span class="material-icons customized-icon">person</span>Player</label>
+                <label id = "labelPlayerScore">Score: 0</label>
+            </div>
+        </div>
+        <div class="container history">
+
+        </div>
+        <script src="https://kit.fontawesome.com/e0b24a08b6.js" crossorigin="anonymous"></script>
+        <script src="game.js"></script>
+    </body>
+</html>

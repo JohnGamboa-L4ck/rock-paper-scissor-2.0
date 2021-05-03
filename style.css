@@ -1,0 +1,150 @@
+:root {
+    --green: hsl(146, 64%, 61%);
+    --darker-green: hsl(168, 45%, 40%);
+    --blue: hsl(209, 40%, 27%);
+    --lighter-blue: hsl(209, 40%, 37%);
+    --white: hsl(0, 0%, 100%);
+    --darker-white: hsl(0, 0%, 90%);
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: var(--blue);
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;  
+}
+
+body {
+	height: 100%;
+    background: var(--green);
+    font-family: 'Indie Flower', cursive;
+    display: grid;
+    place-items: center;
+}
+
+#title {
+    font-size: 5rem;
+    margin-top: 1rem;
+}
+
+#how_to_win {
+    font-size: 1.2rem;
+    color: var(--lighter-blue);
+    margin-bottom: 1rem;
+}
+
+.container {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 90ch;
+    /* min-height: 480px; */
+    max-height: 500px;
+    border: 3px solid var(--blue);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.dashboard {
+    min-width: 280px;
+    margin: .5rem;
+    padding: 0 .5rem;
+    font-size: 1.1rem;
+
+    border: 1px solid black;
+}
+
+#computerDb {
+    text-align: right;
+    cursor: none;
+}
+
+.customized-icon {
+    vertical-align:middle;
+    font-size: 1.6rem;
+}
+
+#labelComputerScore {
+    float: left;
+}
+
+#labelPlayerScore {
+    float: right;
+}
+
+.armory {
+    text-align: center;
+    margin: .8rem .5rem;
+}
+
+.far {
+    font-size: 2rem;
+    margin: 0 .5rem;
+}
+
+.playerWeapons {
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.armory:hover + .hide {
+    display: block;
+    position: absolute;
+    color: var(--lighter-blue);
+    text-align: center; 
+    margin-top: -1.4rem;
+    margin-bottom: .5rem;
+    margin-left: 60px;
+}
+
+.arena {
+    display: flex;
+    flex: 1;
+    min-width: 200px;
+    max-width: 200px;
+    min-height: 200px;
+    max-height: 200px;
+    border-radius: .6rem;
+    margin: 1rem auto;
+    border: 2px outset var(--lighter-blue);
+    background-color: var(--darker-white);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.arena .far {
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 280px) {
+    #title {
+        font-size: 2rem;
+    }
+    .dashboard {
+        min-width: 250px;
+    }
+}
+@media only screen and (max-width: 480px) {
+    #title {
+        font-size: 2rem;
+    }
+}
+@media only screen and (max-width: 680px) {
+    #title {
+        font-size: 2.5rem;
+    }
+}
