@@ -24,9 +24,14 @@
                 </div>
             </div>
             <div class = "arena">
-                <!-- <i class="far fa-hand-scissors"></i>
-                <p>VS.</p>
-                <i class="far fa-hand-scissors"></i>  -->
+                <i class="far fa-hand-scissors hidden" id = "cPlayRock2"></i>                
+                <i class="far fa-hand-paper hidden" id = "cPlayPaper2"></i>
+                <i class="far fa-hand-rock hidden" id = "cPlayScissor2"></i></i>
+                <p class = "hidden" id = "versus">VS.</p>
+                <p class = "hidden" id = "round-winner">Round Winner:<br></p>
+                <i class="far fa-hand-rock hidden" id = "playRock2"></i>
+                <i class="far fa-hand-paper hidden" id = "playPaper2"></i>
+                <i class="far fa-hand-scissors hidden" id = "playScissor2"></i>
             </div>
             <div id = "playerDb" class = "dashboard">
                 <div class = "armory">
@@ -39,7 +44,7 @@
                 <label id = "labelPlayerScore">Score: 0</label>
             </div>
         </div>
-        <div class="container history">
+        <div id = "history" class="container">
 
         </div>
         <script src="https://kit.fontawesome.com/e0b24a08b6.js" crossorigin="anonymous"></script>

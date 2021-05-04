@@ -126,8 +126,16 @@ body {
     gap: 1.2rem;
 }
 
-.arena .far {
-    font-size: 2rem;
+.hidden {
+    display: none!important;
+}
+
+.selected {
+    color: var(--darker-white);
+}
+
+#history {
+    display: none;
 }
 
 @media only screen and (max-width: 280px) {
