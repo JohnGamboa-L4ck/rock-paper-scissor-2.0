@@ -3,6 +3,7 @@
     --darker-green: hsl(168, 45%, 40%);
     --blue: hsl(209, 40%, 27%);
     --lighter-blue: hsl(209, 40%, 37%);
+    --lightest-blue: hsl(209, 40%, 74%);
     --white: hsl(0, 0%, 100%);
     --darker-white: hsl(0, 0%, 90%);
 }
@@ -35,10 +36,40 @@ body {
     margin-top: 1rem;
 }
 
-#how_to_win {
+#how_to_win, #how_to_play {
     font-size: 1.2rem;
     color: var(--lighter-blue);
     margin-bottom: 1rem;
+    text-align: center;
+    line-height: 1.8rem;
+    max-width: 40ch!important;
+    font-family: 'Raleway', sans-serif;
+}
+
+u {
+    font-size: 1.3rem;
+}
+
+#htwArrow, #htpArrow {
+    cursor: pointer;
+}
+
+#htwInfo, #htpInfo {
+    display: none;
+    padding-top: 1rem;
+}
+
+.infoIcon {
+    vertical-align:middle;
+    font-size: 1.4rem!important;
+}
+
+
+#round_container {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: var(--lighter-blue);
+    margin-bottom: .5rem;
 }
 
 .container {
@@ -52,6 +83,20 @@ body {
     border: 3px solid var(--blue);
     border-radius: 5px;
     margin-bottom: 1rem;
+}
+
+#playDiv {
+    padding: .5rem 1rem .2rem .7rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+#playDiv h2 {
+    font-size: 2.2rem;
+}
+
+#playDiv:hover {
+    background-color: var(--lightest-blue);
 }
 
 .dashboard {
@@ -131,12 +176,32 @@ body {
 }
 
 .selected {
-    color: var(--darker-white);
+    color: var(--darker-white)!important;
+}
+
+.score, #roundNumber {
+    font-family: 'Raleway', sans-serif;
 }
 
 #history {
-    display: none;
+    padding: .5rem;
 }
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: .2rem;
+}
+
+th {
+    background-color:  var(--darker-white);
+    font-size: 1.2rem;
+    color: var(--lighter-blue);
+}
+  
 
 @media only screen and (max-width: 280px) {
     #title {

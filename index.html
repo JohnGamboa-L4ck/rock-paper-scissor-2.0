@@ -6,21 +6,43 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <h1 id = "title">Rock Paper Scissor</h1>
-        <p id = "how_to_win">First player to reach a score of 5 wins the game.</p>
+        <div class = "container" id = "playDiv">
+            <h2>PLAY</h2>
+        </div>
+        <p id = "how_to_play"><u>How to Play?</u><strong id = "htpArrow"> &#x25BD;</strong><br> 
+            <i id = "htpInfo">
+                Three(3) gesture can be used to play the game.<br>
+                <i class="far fa-hand-rock infoIcon"></i> is equal to "rock",<br>
+                <i class="far fa-hand-paper infoIcon"></i> is equal to "paper",<br>
+                <i class="far fa-hand-scissors infoIcon"></i> is equal to "scissor".<br>
+                <i class="far fa-hand-rock infoIcon"></i> beats <i class="far fa-hand-scissors infoIcon"></i><br>
+                <i class="far fa-hand-paper infoIcon"></i> beats <i class="far fa-hand-rock infoIcon"></i><br>
+                <i class="far fa-hand-scissors infoIcon"></i> beats <i class="far fa-hand-paper infoIcon"></i><br>
+                If players throw out the same gesture,the round ends with a tie.<br>
+                <strong>Note:</strong> The opponent in this game is the computer, it randomly selects gesture.
+            </i>
+        </p>
+        <p id = "how_to_win"><u>How to Win ?</u><strong id = "htwArrow"> &#x25BD;</strong><br> 
+            <i id = "htwInfo">First player to reach a score of 5 wins the game.</i>
+        </p>
+        <p id = "round_container">Round: <label id = "roundNumber"></label></p>
         <!-- rock crushes scissors, scissors cuts paper, paper covers rock -->
         <div class = "container">
             <div id = "computerDb" class = "dashboard">
-                <label id = "labelComputerScore">Score: 0</label>
+                <label id = "labelComputerScore">Score: 
+                    <label id = "computerScore" class = "score"></label>
+                </label>
                 <label>Computer <span class="material-icons customized-icon">smart_toy</span></label>
                 <div class = "armory">
-                    <i class="far fa-hand-scissors" id = "cPlayScissor"></i>                
-                    <i class="far fa-hand-paper" id = "cPlayPaper"></i>
-                    <i class="far fa-hand-rock" id = "cPlayRock"></i>
+                    <i class="far fa-hand-scissors weapon" id = "cPlayScissor"></i>                
+                    <i class="far fa-hand-paper weapon" id = "cPlayPaper"></i>
+                    <i class="far fa-hand-rock weapon" id = "cPlayRock"></i>
                 </div>
             </div>
             <div class = "arena">
@@ -35,17 +57,29 @@
             </div>
             <div id = "playerDb" class = "dashboard">
                 <div class = "armory">
-                    <i class="far fa-hand-rock playerWeapons" id = "playRock"></i>
-                    <i class="far fa-hand-paper playerWeapons" id = "playPaper"></i>
-                    <i class="far fa-hand-scissors playerWeapons" id = "playScissor"></i>
+                    <i class="far fa-hand-rock playerWeapons weapon" id = "playRock"></i>
+                    <i class="far fa-hand-paper playerWeapons weapon" id = "playPaper"></i>
+                    <i class="far fa-hand-scissors playerWeapons weapon" id = "playScissor"></i>
                 </div>
                 <div class="hide">Rock | Paper | Scissor</div>
                 <label><span class="material-icons customized-icon">person</span>Player</label>
-                <label id = "labelPlayerScore">Score: 0</label>
+                <label id = "labelPlayerScore">Score: 
+                    <label id = "playerScore" class = "score"></label>
+                </label>
             </div>
         </div>
         <div id = "history" class="container">
-
+            <h2>Game History</h2>
+            <table id = "historyTable">
+                <thead>
+                    <th>#</th>
+                    <th>Player</th>
+                    <th>Computer</th>
+                    <th>Winner</th>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
         </div>
         <script src="https://kit.fontawesome.com/e0b24a08b6.js" crossorigin="anonymous"></script>
         <script src="game.js"></script>
