@@ -15,7 +15,7 @@
         <div class = "container" id = "playDiv">
             <h2>PLAY</h2>
         </div>
-        <p id = "how_to_play"><u>How to Play?</u><strong id = "htpArrow"> &#x25BD;</strong><br> 
+        <p id = "how_to_play" class = "howTo"><u>How to Play?</u><strong id = "htpArrow"> &#x25BD;</strong><br> 
             <i id = "htpInfo">
                 Three(3) gesture can be used to play the game.<br>
                 <i class="far fa-hand-rock infoIcon"></i> is equal to "rock",<br>
@@ -28,15 +28,14 @@
                 <strong>Note:</strong> The opponent in this game is the computer, it randomly selects gesture.
             </i>
         </p>
-        <p id = "how_to_win"><u>How to Win ?</u><strong id = "htwArrow"> &#x25BD;</strong><br> 
+        <p id = "how_to_win" class = "howTo"><u>How to Win ?</u><strong id = "htwArrow"> &#x25BD;</strong><br> 
             <i id = "htwInfo">First player to reach a score of 5 wins the game.</i>
         </p>
-        <p id = "round_container">Round: <label id = "roundNumber"></label></p>
-        <!-- rock crushes scissors, scissors cuts paper, paper covers rock -->
-        <div class = "container">
+        <p id = "round_container">Round: <strong id = "roundNumber"></strong></p>
+        <div class = "container" id = "gameContainer">
             <div id = "computerDb" class = "dashboard">
                 <label id = "labelComputerScore">Score: 
-                    <label id = "computerScore" class = "score"></label>
+                    <label id = "computerScore" class = "score">0</label>
                 </label>
                 <label>Computer <span class="material-icons customized-icon">smart_toy</span></label>
                 <div class = "armory">
@@ -61,18 +60,22 @@
                     <i class="far fa-hand-paper playerWeapons weapon" id = "playPaper"></i>
                     <i class="far fa-hand-scissors playerWeapons weapon" id = "playScissor"></i>
                 </div>
-                <div class="hide">Rock | Paper | Scissor</div>
                 <label><span class="material-icons customized-icon">person</span>Player</label>
                 <label id = "labelPlayerScore">Score: 
-                    <label id = "playerScore" class = "score"></label>
+                    <label id = "playerScore" class = "score">0</label>
                 </label>
             </div>
+        </div>
+        <div class = "container" id = "winnerDiv">
+            <h2>Winner: <strong id = "winnerName"></strong></h2>
+            <button id = "menu" class = "btn">Menu</button>
+            <button id = "playAgain" class = "btn">Play Again!</button>
         </div>
         <div id = "history" class="container">
             <h2>Game History</h2>
             <table id = "historyTable">
                 <thead>
-                    <th>#</th>
+                    <th>R#</th>
                     <th>Player</th>
                     <th>Computer</th>
                     <th>Winner</th>

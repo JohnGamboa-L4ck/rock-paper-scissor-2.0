@@ -70,6 +70,8 @@ u {
     font-size: 1.4rem;
     color: var(--lighter-blue);
     margin-bottom: .5rem;
+    padding-top: .5rem;
+    display: none;
 }
 
 .container {
@@ -85,6 +87,10 @@ u {
     margin-bottom: 1rem;
 }
 
+#gameContainer {
+    display: none;
+}
+
 #playDiv {
     padding: .5rem 1rem .2rem .7rem;
     margin-top: 1rem;
@@ -95,7 +101,7 @@ u {
     font-size: 2.2rem;
 }
 
-#playDiv:hover {
+#playDiv:hover, #playDiv:focus {
     background-color: var(--lightest-blue);
 }
 
@@ -140,20 +146,6 @@ u {
     cursor: pointer;
 }
 
-.hide {
-    display: none;
-}
-
-.armory:hover + .hide {
-    display: block;
-    position: absolute;
-    color: var(--lighter-blue);
-    text-align: center; 
-    margin-top: -1.4rem;
-    margin-bottom: .5rem;
-    margin-left: 60px;
-}
-
 .arena {
     display: flex;
     flex: 1;
@@ -183,8 +175,32 @@ u {
     font-family: 'Raleway', sans-serif;
 }
 
+#winnerDiv {
+    padding: .5rem;
+    margin-top: 1rem;
+    display: none;
+}
+
+.btn {
+    padding: .5rem .2rem;
+    font-size: 1rem;
+    margin: .4rem .5rem .5rem .5rem;
+    font-family: 'Indie Flower', cursive;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3px;
+    color: var(--blue);
+}
+
+.btn:hover, .btn:focus {
+    background-color: var(--lightest-blue);
+}
+
 #history {
     padding: .5rem;
+    overflow: auto;
+    display: none;
 }
 
 table {
