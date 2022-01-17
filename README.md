@@ -8,5 +8,5 @@ Rock paper scissors game where you play against the computer.
 
 This project was built to complete the "[Revisiting Rock Paper Scissors](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/revisiting-rock-paper-scissors)" from the [Foundations course](https://www.theodinproject.com/paths/foundations/courses/foundations) of [The Odin Project](https://www.theodinproject.com/) curriculum. The objective is to add a simple user interface to my prior rock paper scissors project while learning about DOM manipulation, events, and writing clean code. 
 
-The earlier version of this project, which lacked a good user interface, can be seen here:  
-[https://mrjgamboa.github.io/rockPaperScissor/](https://mrjgamboa.github.io/rockPaperScissor/)
+The earlier version of this project, which lacked a good user interface, can be found here:  
+[https://github.com/mrjgamboa/rockPaperScissor](https://github.com/mrjgamboa/rockPaperScissor)
